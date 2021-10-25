@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+body{
+    background-color: #f0e5de;
+}
+/*------- BARRA DE NAVEGACIÓN -------*/
+.container{
+    width: 95%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+header{
+    background: #cbbcb2;
+    color: #fff;
+    padding: 1em 0;
+    position: relative;
+}
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.logo{
+    float: left;
+    width: 150px;
+    margin: 0;
+    margin-left: 25px;
+}
+.site-nav{
+    top: 100%;
+    right: 0;
+    position: relative;
+    background:#cbbcb2;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+.site-nav-open{
+    height: auto;
+}
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-nav a{
+    color: #fff;
+    display: block;
+    padding: 5px 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+.site-nav a:hover, .site-nav a:focus{
+    background: rgb(207, 167, 153);
+    color: dimgray;
+}
+/*-------- MENU HAMBURGUESA -------*/
+.menu-toggle{
+    padding: 1em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+.hamburguesa{
+    font-size: 30px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+/*-------- MEDIA QUERY --------*/
+@media (min-width: 720px){
+    .menu-toggle{
+        display: none;
+    }
+    .site-nav{
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px;
+        clip-path: initial;
+        width: auto;
+    }
+    .site-nav li{
+        display: inline-block;
+        border: none;
+    }
+    .site-nav a{
+        padding: 0;
+        margin-right: 3em;
+        margin-top: 25px;
+    }
+    .site-nav a:hover, .site-nav a:focus{
+        background: transparent;
+    }
+}
+
+/*-------- FOOTER -------*/
+footer{
+    background-color: #cbbcb2;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+    
+}
+.redsoc{
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px;
+}
+.derechos{
+    color: #ffffff;
+    font-size: 12px;
+}
+/*------- GALERIA PAGINA INICIO -----*/
+section{
+    margin: .5vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+section div{
+    width: 400px;
+    margin: .5vw;
+    overflow: hidden;
+    position: relative;
+}
+section div img{
+    width: 100%;
+    height: auto;
+}
+.img_acc:hover {
+    opacity: .3;
+    transform: scale(1.2);
+  }
+.texto_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #cbbcb2;
+    -webkit-text-stroke: 1px #68605c;
+    z-index: 3;
+}
+.titulo{
+    position: relative;
+    left: 100%;
+}
+.contenedor_img:hover .titulo{
+    left: 0%;
+  }
+
+/*-------- FORMULARIO DE CONTACTO -------*/
+form{
+    margin: auto;
+    max-width: 1000px;
+    background-color: #f0e5de;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 4px grey;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+h2{
+    color: rgb(102, 97, 97);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.img-responsive{
+    height: 400px;
+}
+input, textarea{
+    font-size: 16px;
+    color: rgb(102, 97, 97);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(102, 97, 97);
+    background-color: #f0e5de;
+    outline: none;
+    padding: 15px;
+}
+textarea{
+    min-height: 140px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton{
+    background: #cbbcb2;
+    border-radius: 1px;
+    border: 1px solid #68605c;
+    font-size: 16px;
+    width: 100%;
+}
+#boton:hover{
+    background: #cfc4bd;
+}
+.info_form{
+    text-align: center;
+}
+/*--------- PÁGINA NOSOTROS ---------*/
+.nosotros{
+    display: flex;
+    justify-content: space-around;
+}
+.div_img_nosotros{
+width: 40%;
+}
+.img_nosotros{
+    width: 100%;;
+}
+.info_nosotros{
+    text-align: justify;
+    color: rgb(102, 97, 97);
+}
+.titulo_nosotros{
+    
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+/*------- GALERIA DE PRODUCTOS -------*/
+.img_prod{
+    width: 100%;
+    margin-top: 15px;
+}
+.contenedor_prod{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.column{
+    padding: 5px;
+    flex: 30%;
+}
+.titulo_prod{
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-top: 20px;
+}
+@media (max-width: 800px){
+    .column{
+        flex: 100%;
+    }
+}
